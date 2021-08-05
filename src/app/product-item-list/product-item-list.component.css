@@ -1,0 +1,25 @@
+.search{
+    border-color: rgb(155, 179, 250);
+}
+
+.productList{
+    border-color: greenyellow;
+}
+
+.bordercolor{
+    border-color: cyan;
+}
+
+table {
+    border-style: hidden;
+    
+}
+.itemsTable td {
+    border: 1px solid red;
+}
+
+.categoryTable td{
+border-color: cyan; border-style: solid; 
+border-width: 1px 1px 1px 1px;
+}
+

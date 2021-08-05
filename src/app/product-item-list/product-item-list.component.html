@@ -1,0 +1,35 @@
+<fieldset class="blueBorder" >
+    <table >
+        <tr>
+          <td>
+            <input type="text" placeholder="Search..." [(ngModel)]="searchText"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <input type="checkbox" value="show products in stock only" [(ngModel)]="showOnlyInStock"/>
+              Show products in stock only
+            </label>            
+          </td>
+        </tr>
+      </table>
+</fieldset>
+<br>
+<fieldset class="productList">
+    <table>
+        <tr>
+         <th>Name</th>
+         <th>Price</th>
+        </tr>
+       <ng-container *ngFor="let category of getCategories()">
+             <tr class ="categoryTable">
+                <td colspan="2">{{category}}</td>
+             </tr>
+             <tr class ="itemsTable"  *ngFor="let prod of getProductsFromCategories(category)">                
+                    <td [ngStyle]="{'color': prod.inStock ? 'black' : 'red'}">{{prod.name}}</td>
+             <td>{{prod.price}}</td>
+             </tr>
+       </ng-container>
+       </table>
+</fieldset>
